@@ -4,6 +4,9 @@ Display Spotify Lyrics the same way Youtube Displays it's subtitles on Windows
 <br>
 <br>
 
+![lyrics](https://github.com/NassimMansouri/Spotify-As-Subtitles/assets/123596322/c6e68864-6a88-4958-bf00-99b9964a370d)
+
+
 # Setting up the script
 
 ## Getting your Client_ID, Client_Secret, Redirect_Uri :
