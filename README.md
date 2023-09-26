@@ -1,6 +1,6 @@
 # Spotify-As-Subtitles
 
-Display Spotify Lyrics the same way Youtube Displays it's subtitles on Windows
+Display Spotify Lyrics the same way Youtube Displays it's subtitles on Windows and Linux
 <br>
 <br>
 
