@@ -4,7 +4,7 @@ Display Spotify Lyrics the same way Youtube Displays it's subtitles on Windows a
 <br>
 <br>
 
-![lyrics](https://github.com/NassimMansouri/Spotify-As-Subtitles/assets/123596322/c6e68864-6a88-4958-bf00-99b9964a370d)
+![showcase](https://github.com/Graychii/Spotify-As-Subtitles/assets/123596322/b2f3913b-556f-4929-a67a-0181cc409700)
 
 
 # Setting up the script
