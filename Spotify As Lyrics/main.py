@@ -28,7 +28,6 @@ def get_lyrics(track_id):
 		cache_path = f'Caching/{track_id}'
 		with open(cache_path, 'r') as json_file:
 			data = json.load(json_file)
-		# print('cached data')
 		return(data)
 	else:
 		try : 
@@ -76,6 +75,8 @@ while True :
 					previous_time = 0
 			except : 
 				print('connection lost ')
+		else: 
+			break
 
 
 	time.sleep(1)
