@@ -26,15 +26,13 @@ print(results['item']['name'])
 curr_track_id = results['item']['id']
 def get_lyrics(track_id):
 	try : 
-		lyrics = get(f"https://spotify-lyric-api.herokuapp.com/?trackid={track_id}").content
+
+		lyrics = get(f"https://lyrix.vercel.app/getLyrics/{track_id}").content
 		if lyrics.decode() != error_message : 
 			lyrics = json.loads(lyrics)
-			while lyrics['error'] :
-				lyrics = get(f"https://spotify-lyric-api.herokuapp.com/?trackid={track_id}").content
-				lyrics = json.loads(lyrics)
 			return lyrics
 	except : 
-		print('connection lost ')
+		print('connection lost 1 ')
 		return ' '
 lyrics = get_lyrics(curr_track_id)
 previous_time = 0
@@ -48,7 +46,7 @@ while True :
 			results = sp.currently_playing()
 			current_time = int(results['progress_ms'])
 			if results['timestamp'] > 0 :
-				lyrics = get_lyrics(results['item']['id'])
+				lyrics = (get_lyrics(results['item']['id']))['lyrics']
 			if lyrics != ' ' : 
 				for i in range(len(lyrics['lines']) - 1):
 					if current_time > int(lyrics['lines'][i]['startTimeMs']) and current_time < int(lyrics['lines'][i + 1]['startTimeMs']) and current_time > previous_time :
@@ -65,7 +63,8 @@ while True :
 			if current_time < current_bottom or current_time > current_top:
 				previous_time = 0
 		except : 
-			print('connection lost')
+			print(lyrics)
+			print('connection lost 2')
 
 
 	time.sleep(1)
@@ -74,4 +73,8 @@ while True :
 		if results['timestamp'] > 0 :
 			lyrics = get_lyrics(results['item']['id'])
 	except : 
-		print('Connection lost')
+		print('Connection lost 3')
+
+
+
+
